@@ -25,6 +25,15 @@ namespace pole02
             for (int i = 0; i < n; i++)
             {
                 pole[i] = rnd.Next(1,11);
+                textBox2.AppendText(pole[i].ToString() + Environment.NewLine);
+            }
+            if (radioButton1.Checked == true)
+            {
+                Array.Sort(pole);
+                listBox1.Items.Add(pole);
+            }
+            else
+            {
 
             }
         }

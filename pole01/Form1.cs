@@ -66,7 +66,7 @@ namespace pole01
                 pole[i] = rnd.NextDouble() * (1000 - 1) + 1;
 
                 textBox3.AppendText(pole[i].ToString("F2") + Environment.NewLine);
-                ap += pole[i];
+   
             }
             double max = pole.Max();
             double min = pole.Min();
@@ -78,8 +78,9 @@ namespace pole01
             {
                 textBox1.AppendText(pole[i].ToString("F2") + Environment.NewLine);
             }
+            ap = pole.Sum();
             ap = ap - (min + max);
-            ap = ap / (n - 2);
+            ap = ap / (pole.Length - 2);
             label4.Text = "aritmeticky prumer je " + ap.ToString("F2");
         }
     }
