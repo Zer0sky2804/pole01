@@ -28,6 +28,12 @@ namespace pole02
                 textBox2.AppendText(pole[i].ToString() + Environment.NewLine);
             } 
             Array.Sort(pole);
+            int max = pole[n - 1];
+            int min = pole[0];
+            int pmin = Array.LastIndexOf(pole,min);
+            int min2 = pole[pmin + 1];
+            int pmax = Array.IndexOf(pole, max);
+            int max2 = pole[pmax - 1];
             if (radioButton2.Checked == true)
             {
                    Array.Reverse(pole);
@@ -36,6 +42,8 @@ namespace pole02
             {
                     listBox1.Items.Add(pole[i]);
             }
+            listBox1.Items.Add("2min je " + min2);
+            listBox1.Items.Add("2max je " + max2);
         }
     }
 }
