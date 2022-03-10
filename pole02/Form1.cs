@@ -26,15 +26,15 @@ namespace pole02
             {
                 pole[i] = rnd.Next(1,11);
                 textBox2.AppendText(pole[i].ToString() + Environment.NewLine);
-            }
-            if (radioButton1.Checked == true)
+            } 
+            Array.Sort(pole);
+            if (radioButton2.Checked == true)
             {
-                Array.Sort(pole);
-                listBox1.Items.Add(pole);
+                   Array.Reverse(pole);
             }
-            else
+            for (int i = 0; i < n; i++)
             {
-
+                    listBox1.Items.Add(pole[i]);
             }
         }
     }
