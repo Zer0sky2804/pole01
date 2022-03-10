@@ -46,7 +46,7 @@ namespace pole03
                 listBox4.Items.Add(poled[i]);
             }
             int[] polee = polea.Union(poleb).ToArray();
-            for(int i = 0; i < poled.Length; i++)
+            for(int i = 0; i < polee.Length; i++)
             {
                 listBox5.Items.Add(polee[i]);
             }
